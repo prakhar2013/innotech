@@ -158,8 +158,8 @@ def heart_disease_prediction():
         fbs = 1 if fbs == "Yes" else 0
         thalach = st.number_input(label="Maximum Heart Rate Achieved", min_value=0, max_value=220, value=150)
         oldpeak = st.number_input(label="ST Depression", min_value=0.0, max_value=10.0, value=1.0, step=0.1, format="%.1f")
-        slope = st.number_input(label="Slope of Peak Exercise ST Segment (0-2)", min_value=0, max_value=2, value=1)
-        thal = st.number_input(label="Thalassemia (0-3)", min_value=0, max_value=3, value=2)
+        slope = st.number_input(label="Slope of Peak Exercise ST Segment (0-3)", min_value=0, max_value=3, value=1)
+        thal = st.number_input(label="Thalassemia (0-7)", min_value=0, max_value=7, value=2)
 
     input_data = np.array([[age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]])
 
